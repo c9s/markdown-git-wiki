@@ -1,0 +1,7 @@
+#!/usr/bin/env perl
+use Text::WikiCreole;
+# creole_plugin \&myplugin; # register custom plugin parser
+local $/;
+my $text = <>;
+my $html = creole_parse($text);
+print $html;
