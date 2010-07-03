@@ -1,9 +1,22 @@
 
-## A Git-based wiki (markdown)
+# A Git-based wiki (markdown)
 
 This is a pure git wiki (not a web server), this utility only provides the functionbility
 of translating markdown pages into web pages. the link between pages can be
 named by "[[Link]]". so your git wiki would just a git repository.
+
+## Installation
+
+You will need text::markdown module , just run 
+
+    sudo make deps
+
+or you can install text::markdown module via cpanminus:
+
+    sudo cpanm Text::Markdown
+
+## Usage
+
 
 To write a page , just edit file under the directory:
 
