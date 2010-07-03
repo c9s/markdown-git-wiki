@@ -1,0 +1,32 @@
+#!/usr/bin/env perl
+use Text::Markdown 'markdown';
+local $/;
+my $text = <>;
+
+while( $text =~ m{\[\[(\S+)\]\]}g ) {
+    my $name = $1;
+    if( ! -e "$name.mkd" ) {
+        print STDERR " - $name.mkd not found\n";
+    }
+}
+
+$text =~ s{\[\[(\S+)\]\]}{[$1]($1.htm)}g;
+
+my $html = markdown( $text, {
+    empty_element_suffix => '>',
+    tab_width => 2,
+} );
+
+print <<END;
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head> 
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" /> 
+    <title>   </title>
+  </head>
+<body>
+END
+print $html;
+print <<END;
+</body>
+</html>
+END

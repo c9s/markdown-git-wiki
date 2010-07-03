@@ -1,0 +1,23 @@
+
+## A Git-based wiki (markdown)
+
+This is a pure git wiki (not a web server), this utility only provides the functionbility
+of translating markdown pages into web pages. the link between pages can be
+named by "[[Link]]". so your git wiki would just a git repository.
+
+To translate your markdown pages into web pages, just run 
+
+    make 
+
+To open static web pages:
+
+    open pages/page.htm
+
+    # or
+    
+    firefox pages/page.htm
+
+To clean up, just run
+
+    make clean
+
