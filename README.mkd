@@ -6,6 +6,9 @@ only provides the functionbility of translating markdown pages into web pages.
 links between pages can be named by "[[Link]]". so your git wiki is just a git
 repository, but you can read your wiki pages in browser.
 
+It also provides a vim plugin for you to edit/jump pages in Vim editor. (just
+press key `K` on the link)
+
 ## Installation
 
 You will need text::markdown module , just run 
