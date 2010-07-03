@@ -1,9 +1,10 @@
 
-# A Git-based wiki (markdown)
+# A Git-based markdown wiki 
 
-This is a pure git wiki (not a web server), this utility only provides the functionbility
-of translating markdown pages into web pages. the link between pages can be
-named by "[[Link]]". so your git wiki would just a git repository.
+This is a pure git-based markdown wiki (_it's not a web server_), this utility
+only provides the functionbility of translating markdown pages into web pages.
+links between pages can be named by "[[Link]]". so your git wiki is just a git
+repository, but you can read your wiki pages in browser.
 
 ## Installation
 
