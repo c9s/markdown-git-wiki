@@ -1,0 +1,60 @@
+
+# A Git-based markdown wiki 
+
+這是一個單純以 Git 版本控制系統為基礎的 Wiki，採用 Markdown Text 格式
+(但這不是一個 Web server 或是 Web application)
+
+這個工具只提供了將 Markdown 格式的文字檔轉換成網頁的腳本，並自動將 [[連結]] 的
+連結轉換成導向到 `連結.htm` 的頁面。
+
+所以這是一個單純的 Git 版本庫，但您可在瀏覽器中閱讀您所撰寫的 Wiki 內容。
+
+## 安裝
+
+您只需要安裝好 Text::Markdown 模組，執行;
+
+    sudo make deps
+
+或者若你有 cpanminus ，可直接透過 cpanm 安裝:
+
+    sudo cpanm Text::Markdown
+
+## 用法
+
+建立一個 wiki，只需要將此儲存庫 clone 或者複製出來:
+
+    git clone git://github.com/c9s/markdown-git-wiki.git your-wiki
+    cd your-wiki
+
+*(Optional)* then you can rename the remote name (if you want your own git wiki remote):
+
+    git remote rename origin wikisrc
+
+*(Optional)* after you deployed your git wiki repository on your server, you can add it to remote
+
+    git remote add origin blah@server.com:/path/to/your/git-wiki.git
+
+欲建立頁面，直接編輯副檔名為 .mkd 的檔案即可:
+
+    vim index.mkd
+
+欲將文字檔轉換成網頁檔案，直接執行:
+
+    make 
+
+閱讀網頁格式 Wiki:
+
+    open pages/page.htm
+
+    # 或是
+    
+    firefox pages/page.htm
+
+清空網頁檔案:
+
+    make clean
+
+## 設置
+
+您可以在 Makefile 檔案中，設置來源資料夾以及輸出資料夾。
+
