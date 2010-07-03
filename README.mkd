@@ -17,7 +17,6 @@ or you can install text::markdown module via cpanminus:
 
 ## Usage
 
-
 To write a page , just edit file under the directory:
 
     vim index.mkd
@@ -38,4 +37,7 @@ To clean up, just run
 
     make clean
 
+## Configuration
+
+You can configure input and output directory in Makefile.
 
