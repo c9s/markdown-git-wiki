@@ -5,6 +5,6 @@ OUTPUT_DIR=$2
 mkdir -p $OUTPUT_DIR
 for file in $IN_DIR/*.mkd ; do
     echo "Converting $file ..."
-    perl bin/markdown2html $file > $OUTPUT_DIR/${file/.mkd/.htm}
+    perl bin/markdown2html $file > $OUTPUT_DIR/${file/.mkd/.html}
 done
 
