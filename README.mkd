@@ -17,6 +17,18 @@ or you can install text::markdown module via cpanminus:
 
 ## Usage
 
+To create a wiki , just clone or copy this repository:
+
+    git clone git://github.com/c9s/markdown-git-wiki.git your-wiki
+
+*(Optional)* then you can rename the remote name (if you want your own git wiki remote):
+
+    git remote rename origin wikisrc
+
+*(Optional)* after you deployed your git wiki repository on your server, you can add it to remote
+
+    git remote add origin blah@server.com:/path/to/your/git-wiki.git
+
 To write a page , just edit file under the directory:
 
     vim index.mkd
