@@ -2,6 +2,7 @@
 use Text::Markdown 'markdown';
 local $/;
 my $text = <>;
+open('TEMPLATE', 'media/template.html');
 
 while( $text =~ m{\[\[(\S+)\]\]}g ) {
     my $name = $1;
@@ -17,16 +18,7 @@ my $html = markdown( $text, {
     tab_width => 2,
 } );
 
-print <<END;
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-  <head> 
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" /> 
-    <title>   </title>
-  </head>
-<body>
-END
-print $html;
-print <<END;
-</body>
-</html>
-END
+while(<TEMPLATE>){
+	$_ =~ s{GENERATEDHTML}{$html}g;
+	print $_;
+}

@@ -57,3 +57,8 @@ To clean up, just run
 
 You can configure input and output directory in Makefile.
 
+You'll be able to modify generated HTML code editing media/template.html and media/main.css
+
+To update all the pages, just run :
+
+    make
